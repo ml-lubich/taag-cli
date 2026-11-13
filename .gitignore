@@ -1,0 +1,12 @@
+# Private work queue; keep it local for a public project.
+tasks/
+
+# Python build and test artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.coverage

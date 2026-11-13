@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taag"
+version = "0.2.0"
+description = "A Typer CLI and Python library for FIGlet text art"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = ["figlet", "ascii-art", "cli", "typer"]
+dependencies = ["pyfiglet>=1.0.2", "rich>=13", "typer>=0.12"]
+
+[project.scripts]
+taag = "taag.cli:app"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+taag = ["fonts/*.flf"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
